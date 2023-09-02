@@ -10,7 +10,7 @@ const Login = () => {
 	// console.log("auth", auth);
 
 	return (
-		<div className="mt-[231px] mx-auto">
+		<div className="mt-24 md:mt-[231px] mx-auto">
 			<AuthBox maxW={668}>
 				<div className="mt-4 flex flex-col items-center md:px-[111px]">
 					<LoginIcon />

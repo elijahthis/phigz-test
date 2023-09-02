@@ -8,11 +8,14 @@ interface AuthBoxProps {
 const AuthBox = ({ children, maxW }: AuthBoxProps) => {
 	return (
 		<div
-			className={`bg-[#F4F2F6] p-10 max-w-[${maxW}px] w-screen relative rounded-[30px] `}
+			className={`bg-[#F4F2F6] p-10 max-w-[${maxW}px] w-screen relative md:rounded-[30px] `}
 			style={{ maxWidth: `${maxW}px` }}
 		>
 			{children}
-			<CloseIcon className="absolute top-10 right-10 cursor-pointer" />
+			<CloseIcon
+				className="absolute top-10 right-10 cursor-pointer"
+				onClick={() => {}}
+			/>
 		</div>
 	);
 };

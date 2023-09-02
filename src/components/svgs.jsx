@@ -1,4 +1,4 @@
-export const CloseIcon = ({ className }) => (
+export const CloseIcon = ({ className, onClick }) => (
 	<svg
 		width="25"
 		height="25"
@@ -6,6 +6,7 @@ export const CloseIcon = ({ className }) => (
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 		className={className}
+		onClick={onClick}
 	>
 		<path
 			id="Icon"
@@ -108,5 +109,26 @@ export const ForgotPasswordIcon = () => (
 			d="M50.345 37.736L53.033 41.768L55.433 40.072L52.457 36.264L57.097 34.952L56.169 32.168L51.625 33.832L51.817 29H48.905L49.065 33.832L44.553 32.136L43.625 34.952L48.233 36.264L45.257 40.072L47.657 41.768L50.345 37.736Z"
 			fill="#853EDF"
 		/>
+	</svg>
+);
+
+export const MenuIcon = ({ className, onClick }) => (
+	<svg
+		stroke="currentColor"
+		fill="none"
+		stroke-width="2"
+		viewBox="0 0 24 24"
+		aria-hidden="true"
+		height="1.5rem"
+		width="1.5rem"
+		xmlns="http://www.w3.org/2000/svg"
+		className={className}
+		onClick={onClick}
+	>
+		<path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			d="M4 6h16M4 12h16m-7 6h7"
+		></path>
 	</svg>
 );
