@@ -11,7 +11,7 @@ const Register = () => {
 			<AuthBox maxW={668}>
 				<div className="mt-4 flex flex-col items-center md:px-[111px]">
 					<RegisterIcon />
-					<h1 className="mb-5 mt-16">Create Account</h1>
+					<h1 className="mb-5 mt-16 text-center">Create Account</h1>
 					<p className="mb-10">
 						Already have an account? <Link to="/auth/login">Login</Link>
 					</p>
@@ -48,11 +48,6 @@ const Register = () => {
 							label="Password"
 							type="password"
 							placeholder="Enter password"
-							labelSide={
-								<Link to="/auth/forgot-password" className="text-base">
-									Forgot password?
-								</Link>
-							}
 						/>
 						<p className=" text-sm mt-[-10px] mb-[10px] ">
 							By creating an account you agree to our{" "}

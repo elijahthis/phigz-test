@@ -14,7 +14,7 @@ const Login = () => {
 			<AuthBox maxW={668}>
 				<div className="mt-4 flex flex-col items-center md:px-[111px]">
 					<LoginIcon />
-					<h1 className="mb-11 mt-5">Log in</h1>
+					<h1 className="mb-11 mt-5 text-center">Log in</h1>
 					<form
 						action=""
 						className="flex flex-col items-stretch gap-[30px] w-full "

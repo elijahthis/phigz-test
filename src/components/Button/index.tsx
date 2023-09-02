@@ -33,7 +33,7 @@ const Button = ({
 					: "bg-transparent"
 			} ${
 				fullWidth ? "w-full" : "w-max"
-			} cursor-pointer rounded-[10px] px-5 py-3`}
+			} cursor-pointer rounded-[10px] px-5 py-3 ${className}`}
 			onClick={(e: MouseEvent<HTMLButtonElement>) => {
 				if (disabled) e.preventDefault();
 				else if (!loading) onClick && onClick();
