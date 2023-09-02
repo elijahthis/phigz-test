@@ -30,7 +30,7 @@ const Button = ({
 					? "bg-pry-col text-white"
 					: variant === "outline"
 					? "bg-transparent text-pry-col border border-pry-col"
-					: "bg-transparent"
+					: "bg-transparent text-pry-col"
 			} ${
 				fullWidth ? "w-full" : "w-max"
 			} cursor-pointer rounded-[10px] px-5 py-3 ${className}`}
