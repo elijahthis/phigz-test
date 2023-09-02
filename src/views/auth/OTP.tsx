@@ -1,5 +1,5 @@
-const OTP = () => {
+const OTPPage = () => {
 	return <div></div>;
 };
 
-export default OTP;
+export default OTPPage;

@@ -2,13 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+/* fonts */
+@font-face {
+	font-family: "BR Cobane";
+	src: url(../public/fonts/Brink\ -\ BR\ Cobane\ Regular.otf);
+	font-weight: 400;
 }
-
-body {
+@font-face {
+	font-family: "BR Cobane";
+	src: url(../public/fonts/Brink\ -\ BR\ Cobane\ Medium.otf);
+	font-weight: 500;
+}
+@font-face {
+	font-family: "BR Cobane";
+	src: url(../public/fonts/Brink\ -\ BR\ Cobane\ SemiBold.otf);
+	font-weight: 600;
+}
+@font-face {
+	font-family: "BR Cobane";
+	src: url(../public/fonts/Brink\ -\ BR\ Cobane\ Bold.otf);
+	font-weight: 700;
+}
+@font-face {
+	font-family: "BR Cobane";
+	src: url(../public/fonts/Brink\ -\ BR\ Cobane\ Black.otf);
+	font-weight: 900;
+	font-style: normal;
 }
 
 .root,
@@ -16,4 +35,42 @@ body {
 #docs-root {
 	--pry-col: #853edf;
 	--sec-col: #f4f2f6;
+
+	--main-dark: #1f261e;
+	--sec-dark: #626762;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*::selection {
+	background-color: var(--pry-col, #853edf);
+	color: var(--sec-col, #f4f2f6);
+}
+
+body {
+	font-family: "BR Cobane", sans-serif;
+	color: var(--sec-dark, #626762);
+}
+
+h1 {
+	color: var(--main-dark, #1f261e);
+	text-align: center;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 36px; /* 112.5% */
+}
+
+a {
+	text-decoration: none;
+	color: var(--pry-col, #853edf);
+
+	/* disable text selection */
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }

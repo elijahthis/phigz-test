@@ -8,6 +8,10 @@ import AuthLayout from "./layouts/AuthLayout";
 import Login from "./views/auth/Login";
 import Register from "./views/auth/Register";
 import AuthConsumer from "./hooks/useAuth";
+import NotFound from "./views/not-found";
+import ForgotPassword from "./views/auth/ForgotPassword";
+import OTPPage from "./views/auth/OTP";
+import VerificationStatus from "./views/auth/VerificationStatus";
 
 function App() {
 	const auth = AuthConsumer();
@@ -19,6 +23,9 @@ function App() {
 					<Route path="/auth" element={<AuthLayout />}>
 						<Route path="login" element={<Login />} />
 						<Route path="register" element={<Register />} />
+						<Route path="forgot-password" element={<ForgotPassword />} />
+						<Route path="otp" element={<OTPPage />} />
+						<Route path="status" element={<VerificationStatus />} />
 					</Route>
 					<Route
 						path="/"
@@ -26,6 +33,7 @@ function App() {
 					>
 						<Route path="home" element={<Login />} />
 					</Route>
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

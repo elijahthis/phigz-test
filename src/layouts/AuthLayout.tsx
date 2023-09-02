@@ -3,9 +3,11 @@ import Header from "../components/Header";
 
 const AuthLayout = () => {
 	return (
-		<main>
+		<main className="">
 			<Header />
-			<Outlet />
+			<div className="flex pb-20">
+				<Outlet />
+			</div>
 		</main>
 	);
 };
