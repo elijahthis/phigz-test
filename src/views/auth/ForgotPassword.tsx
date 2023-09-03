@@ -7,7 +7,6 @@ import {
 	LoginIcon,
 	RegisterIcon,
 } from "../../components/svgs";
-import AuthConsumer from "../../hooks/useAuth";
 
 const ForgotPassword = () => {
 	const [searchParams, setSearchParams] = useSearchParams();

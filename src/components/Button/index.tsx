@@ -1,4 +1,5 @@
 import { MouseEvent } from "react";
+import { BiLoaderIcon } from "../svgs";
 
 interface ButtonProps {
 	variant?: "fill" | "outline" | "text";
@@ -33,13 +34,13 @@ const Button = ({
 					: "bg-transparent text-pry-col"
 			} ${
 				fullWidth ? "w-full" : "w-max"
-			} cursor-pointer rounded-[10px] px-5 py-3 ${className}`}
+			} cursor-pointer rounded-[10px] px-5 py-3 flex items-center justify-center ${className}`}
 			onClick={(e: MouseEvent<HTMLButtonElement>) => {
 				if (disabled) e.preventDefault();
 				else if (!loading) onClick && onClick();
 			}}
 		>
-			{children}
+			{loading ? <BiLoaderIcon className="loader" /> : children}
 		</button>
 	);
 };

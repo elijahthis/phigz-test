@@ -1,4 +1,53 @@
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 .App {
+}
+
+/* .Toastify__toast */
+.Toastify__toast-container {
+	width: unset !important;
+	min-width: 320px;
+	font-family: "BR Cobane";
+}
+.Toastify__toast--error {
+	border: 0;
+	/* border-radius: 50px !important; */
+	background: #a10f18 !important;
+	color: #ffffff !important;
+}
+.Toastify__toast--error svg > path {
+	fill: #ffffff !important;
+}
+
+.Toastify__toast--success {
+	border: 0;
+	/* border-radius: 50px !important; */
+	background: #169d53 !important;
+	color: #ffffff !important;
+}
+.Toastify__toast--success svg > path {
+	fill: #ffffff !important;
+}
+
+.Toastify__toast--info {
+	border: 0;
+	/* border-radius: 50px !important; */
+	background: #243256 !important;
+	color: #ffffff !important;
+}
+.Toastify__toast--info svg > path {
+	fill: #ffffff !important;
+}
+
+.loader {
+	animation: spin 0.3s ease-in-out infinite;
 }
 
 @media (min-width: 1024px) {
