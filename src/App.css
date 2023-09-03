@@ -1,2 +1,8 @@
 .App {
 }
+
+@media (min-width: 1024px) {
+	.dashBody {
+		margin-left: clamp(305px, 25vw, 360px);
+	}
+}

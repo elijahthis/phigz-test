@@ -58,7 +58,7 @@ const Home = () => {
 	return (
 		<div>
 			<div className="mb-6">All time</div>
-			<div className="grid grid-cols-4 gap-6 mb-[50px] ">
+			<div className="grid md:grid-cols-4 gap-6 mb-[50px] ">
 				{dashCards.map((dashItem, ind) => (
 					<DashCard data={dashItem} key={ind} />
 				))}
@@ -69,7 +69,7 @@ const Home = () => {
 					<Link to="#">See details</Link>
 				</div>
 				<GreyDisplay>
-					<div className="flex flex-row items-center gap-4 justify-between pb-6 mb-[30px] border-b border-[#E0E6DD] ">
+					<div className="flex md:flex-row flex-col md:items-center items-start gap-4 justify-between pb-6 mb-[30px] border-b border-[#E0E6DD] ">
 						<div>
 							<div className="mb-4 flex flex-row items-center gap-5">
 								<p className="text-[#8F928E]">Corporate balance</p>
@@ -79,13 +79,15 @@ const Home = () => {
 						</div>
 						<Button onClick={() => {}}>Fund Wallet</Button>
 					</div>
-					<div className="flex flex-row items-center gap-4 justify-between mb-[22px]">
+					<div className="flex md:flex-row flex-col md:items-center items-start md:gap-4 gap-2 justify-between mb-[22px]">
 						<p className="text-[18px] text-main-dark font-semibold ">
 							Recent Transactions
 						</p>
 						<p className="cursor-pointer text-pry-col ">See all</p>
 					</div>
-					<CustomTable columns={transactionColumns} data={transactionList} />
+					<div className="overflow-x-auto">
+						<CustomTable columns={transactionColumns} data={transactionList} />
+					</div>
 				</GreyDisplay>
 			</div>
 		</div>

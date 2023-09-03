@@ -24,9 +24,10 @@ const Sidebar = ({
 
 	return (
 		<aside
-			className={` lg:flex lg:flex-col  w-[360px] bg-white fixed top-0 lg:top-0 lg:left-0 h-screen pt-[88px] pb-[78px] pl-7 pr-10 overflow-y-auto border-r border-[#E0E6DD] ${
+			className={` lg:flex lg:flex-col bg-white fixed top-0 lg:top-0 lg:left-0 h-screen pt-[88px] pb-[78px] pl-7 pr-10 overflow-y-auto border-r border-[#E0E6DD] ${
 				openNav ? "left-0" : "left-[-100%]"
 			} transition-all duration-500 z-20`}
+			style={{ width: "clamp(305px, 25vw, 360px)" }}
 		>
 			<div className="flex flex-col gap-1 py-8 border-b border-[#E0E6DD] ">
 				{routeList.map((routeItem, ind) => (

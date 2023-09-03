@@ -33,7 +33,7 @@ const DashLayout = ({ children }: { children: JSX.Element }) => {
 				openNav={openNav}
 				setOpenNav={setOpenNav}
 			/>
-			<div className="bg-white min-h-screen lg:ml-[360px]">
+			<div className="bg-white min-h-screen dashBody">
 				<DashHeader routeList={routeList} />
 				<div className="px-0 py-8 lg:px-[50px] px-8 lg:py-8 h-full">
 					{children}
