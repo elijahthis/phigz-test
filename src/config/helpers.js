@@ -5,3 +5,7 @@ export const getToken = () => {
 export const setAuthToken = (token) => {
 	localStorage.setItem("FUEL_TKN", token);
 };
+
+export const deleteToken = () => {
+	return localStorage.removeItem("FUEL_TKN");
+};

@@ -167,13 +167,14 @@ export const NotificationIcon = () => (
 	</svg>
 );
 
-export const ProfileIcon = () => (
+export const ProfileIcon = ({ onClick }) => (
 	<svg
 		width="42"
 		height="27"
 		viewBox="0 0 42 27"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
+		onClick={onClick}
 	>
 		<path
 			fillRule="evenodd"
