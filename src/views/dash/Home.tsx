@@ -59,8 +59,8 @@ const Home = () => {
 		<div>
 			<div className="mb-6">All time</div>
 			<div className="grid grid-cols-4 gap-6 mb-[50px] ">
-				{dashCards.map((dashItem) => (
-					<DashCard data={dashItem} />
+				{dashCards.map((dashItem, ind) => (
+					<DashCard data={dashItem} key={ind} />
 				))}
 			</div>
 			<div>

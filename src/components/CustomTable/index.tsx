@@ -21,8 +21,8 @@ const CustomTable = ({ data, columns }: CustomTableProps) => {
 			<tbody>
 				{data.map((item, ind) => (
 					<tr key={ind}>
-						{columns.map((column, ind) => (
-							<td key={ind} className="text-left text-[#5F5C5C] py-[13px] ">
+						{columns.map((column, secInd) => (
+							<td key={secInd} className="text-left text-[#5F5C5C] py-[13px] ">
 								{item[column.key]}
 							</td>
 						))}
