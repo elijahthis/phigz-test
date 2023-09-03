@@ -15,7 +15,27 @@ See the live demo [here](#).
 - Change Password functionality, with OTP.
 
 ## Getting Started
-Clone the repository if you want to run the code on your computer:
 
-   ```bash
-   git clone https://github.com/your-username/your-dashboard-app.git
+1. Clone the repository if you want to run the code on your computer:
+
+```bash
+   git clone https://github.com/elijahthis/phigz-test.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+   cd phigz-test
+```
+
+3. Install dependencies:
+
+```bash
+   npm install
+```
+
+4. Run your application:
+
+```bash
+   npm start
+```
