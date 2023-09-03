@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthBox from "../../components/AuthBox";
 import Button from "../../components/Button";
 import InputComponent from "../../components/InputComponent";
-import { LoginIcon, RegisterIcon } from "../../components/svgs";
+import { RegisterIcon } from "../../components/svgs";
 import { toast } from "react-toastify";
 import { FormEvent, useContext, useState } from "react";
 import { registerUser } from "../../requests/auth";

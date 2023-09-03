@@ -2,11 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import AuthBox from "../../components/AuthBox";
 import Button from "../../components/Button";
 import InputComponent from "../../components/InputComponent";
-import {
-	ForgotPasswordIcon,
-	LoginIcon,
-	RegisterIcon,
-} from "../../components/svgs";
+import { ForgotPasswordIcon } from "../../components/svgs";
 
 const ForgotPassword = () => {
 	const [searchParams, setSearchParams] = useSearchParams();
