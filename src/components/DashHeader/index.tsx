@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { deleteToken } from "../../config/helpers";
 import { NotificationIcon, PaperIcon, ProfileIcon } from "../svgs";
 import { useLocation, useNavigate } from "react-router-dom";
+import { authContext } from "../../hooks/useAuth";
 
 interface DashHeaderProps {
 	routeList: { label: string; route: string; icon: JSX.Element }[];
@@ -31,10 +32,11 @@ const DashHeader = ({ routeList }: DashHeaderProps) => {
 
 const PopUpModal = () => {
 	const navigate = useNavigate();
+	const { userObj } = useContext(authContext);
 
 	return (
 		<div className="absolute right-0 top-[2.5rem] bg-white border border-[#E0E6DD] py-4 px-6 rounded-lg ">
-			<p className="mb-2">Hi {"User"}</p>
+			<p className="mb-2">Hi {userObj?.first_name ?? "User"}</p>
 			<p
 				className="text-pry-col select-none "
 				onClick={() => {

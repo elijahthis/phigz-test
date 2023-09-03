@@ -13,7 +13,7 @@ const Login = () => {
 	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
 
-	const { isLoggedIn, setIsLoggedIn } = useContext(authContext);
+	const { isLoggedIn, setIsLoggedIn, setUserObj } = useContext(authContext);
 
 	const submitFunc = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -50,6 +50,7 @@ const Login = () => {
 			if (res?.status === 200) {
 				toast.success("Login successful");
 				setIsLoggedIn(true);
+				setUserObj(res.data?.user);
 				navigate("/");
 			}
 		} catch (error) {

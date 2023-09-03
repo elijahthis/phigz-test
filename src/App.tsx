@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
@@ -18,13 +18,18 @@ import { authContext } from "./hooks/useAuth";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Zoom } from "react-toastify";
+import { getToken } from "./config/helpers";
+import { fetchUserData } from "./requests/user";
 
 function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [userObj, setUserObj] = useState({});
 
 	return (
 		<div className="App">
-			<authContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+			<authContext.Provider
+				value={{ isLoggedIn, setIsLoggedIn, userObj, setUserObj }}
+			>
 				<BrowserRouter>
 					<Routes>
 						<Route path="/auth" element={<AuthLayout />}>
@@ -38,7 +43,7 @@ function App() {
 							path="/"
 							element={
 								<DashLayout>
-									<ProtectedRoute isLoggedIn={isLoggedIn} />
+									<ProtectedRoute />
 								</DashLayout>
 							}
 						>
