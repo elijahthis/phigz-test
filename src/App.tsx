@@ -12,9 +12,13 @@ import NotFound from "./views/not-found";
 import ForgotPassword from "./views/auth/ForgotPassword";
 import OTPPage from "./views/auth/OTP";
 import VerificationStatus from "./views/auth/VerificationStatus";
+import Home from "./views/dash/Home";
+import DashLayout from "./layouts/DashLayout";
 
 function App() {
 	const auth = AuthConsumer();
+
+	console.log("auth", auth);
 
 	return (
 		<div className="App">
@@ -29,9 +33,13 @@ function App() {
 					</Route>
 					<Route
 						path="/"
-						element={<ProtectedRoute isLoggedIn={auth.isLoggedIn} />}
+						element={
+							<DashLayout>
+								<ProtectedRoute isLoggedIn={auth.isLoggedIn} />
+							</DashLayout>
+						}
 					>
-						<Route path="home" element={<Login />} />
+						<Route index element={<Home />} />
 					</Route>
 					<Route path="*" element={<NotFound />} />
 				</Routes>

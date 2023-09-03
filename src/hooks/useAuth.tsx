@@ -7,13 +7,13 @@ interface useAuthProps {
 }
 
 const authContext = createContext<useAuthProps>({
-	isLoggedIn: false,
+	isLoggedIn: true,
 	logInFunc: () => {},
 	logoutFunc: () => {},
 });
 
 export const useAuth = (): useAuthProps => {
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [isLoggedIn, setIsLoggedIn] = useState(true);
 
 	return {
 		isLoggedIn,
