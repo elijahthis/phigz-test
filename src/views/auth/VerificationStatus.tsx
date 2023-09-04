@@ -8,7 +8,12 @@ const VerificationStatus = () => {
 
 	return (
 		<div className="mt-24 md:mt-[231px] mx-auto">
-			<AuthBox maxW={668}>
+			<AuthBox
+				maxW={668}
+				onClose={() => {
+					navigate("/auth/login");
+				}}
+			>
 				<div className="mt-4 flex flex-col items-center md:px-[111px] pb-6">
 					<SuccessIcon />
 					<h1 className="mt-6 mb-8 text-center">Verification successful!</h1>

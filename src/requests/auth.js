@@ -29,41 +29,27 @@ export const registerUser = async (values) => {
 	}
 };
 
-export const sendOtp = async (values) => {
-	try {
-		const res = await AuthRequest.post("api/accounts/validate_email", values);
-		console.log(res);
-		return res;
-	} catch (err) {
-		console.log(err?.response?.data);
-		console.log(err?.response?.data?.message);
-		throw err;
-	}
-};
-
-export const confirmOtp = async (values) => {
-	try {
-		const res = await AuthRequest.post("api/accounts/confirm_email", values);
-		console.log(res);
-		return res;
-	} catch (err) {
-		console.log(err?.response?.data);
-		console.log(err?.response?.data?.message);
-		throw err;
-	}
-};
-
 export const requestPasswordResetToken = async (values) => {
 	try {
-		const res = await AuthRequest.post("auth/password_reset/", values);
+		const res = await AuthRequest.post("user/password/request", values);
 		console.log(res);
 		return res;
 	} catch (err) {
 		console.log(err?.response?.data);
-		for (let i in err?.response?.data) {
-			toast.error(err?.response?.data[i][0]);
-		}
 		console.log(err?.response?.data?.message);
+		throw err;
+	}
+};
+
+export const verifyOTP = async (values) => {
+	try {
+		const res = await AuthRequest.post("verification/verify", values);
+		console.log(res);
+		return res;
+	} catch (err) {
+		console.log(err?.response?.data);
+		console.log(err?.response?.data?.message);
+		toast.error(err?.response?.data?.message);
 		throw err;
 	}
 };

@@ -84,7 +84,7 @@ const Register = () => {
 
 	return (
 		<div className="mt-24 md:mt-[231px] mx-auto">
-			<AuthBox maxW={668}>
+			<AuthBox maxW={668} onClose={() => {}}>
 				<div className="mt-4 flex flex-col items-center md:px-[111px]">
 					<RegisterIcon />
 					<h1 className="mb-5 mt-16 text-center">Create Account</h1>
