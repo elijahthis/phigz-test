@@ -4,7 +4,7 @@ A simple dashboard application for FuelCredit, with user authentication implemen
 
 ## Demo
 
-See the live demo [here](#).
+See the live demo [here](https://phigz-test.netlify.app/).
 
 ## Features
 
